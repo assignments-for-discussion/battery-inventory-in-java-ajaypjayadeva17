@@ -15,15 +15,16 @@ public class Main {
   static void testBucketingByNumberOfCycles() {
     System.out.println("Counting batteries by usage cycles...\n");
     CountsByUsage counts = countBatteriesByUsage(new int[] {100, 300, 500, 600, 900, 1000});
-    for(int i=0;i<5;i++)
+    int ar[]={100, 300, 500, 600, 900, 1000};
+    int size=6;
+    for(int i=0;i<size;i++)
     {
-      
-    if(counts[i]<410)     //checking for low count
-    counts.lowCount++;               //incrementing the low count variable everytime by one if the value is less than 410
-    else if(counts[i]>=410 && counts[i]<910) //checking  for medium count 
-    counts.mediumCount++;            //incrementing the medium count variable everytime by one if the value is greater than 410 and less than 910
+    if(ar[i]<410)     //checking for low count
+    counts.lowCount++;               //incrementing the low count variable by one if ar[i] is less than 410 
+    else if(ar[i]>=410 && ar[i]<910) //checking for medium  count 
+    counts.mediumCount++;            //incrementing the medium count
     else                              //checking for high count
-    counts.highCount++;              // incrementing the high count variable
+    counts.highCount++;              // incrementing the high count
     }
     System.out.println(counts.lowCount);     //displaying the low count
     System.out.println(counts.mediumCount);  //displaying the medium count
