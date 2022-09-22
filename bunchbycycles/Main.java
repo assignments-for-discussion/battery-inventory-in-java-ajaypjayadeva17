@@ -17,9 +17,10 @@ public class Main {
     CountsByUsage counts = countBatteriesByUsage(new int[] {100, 300, 500, 600, 900, 1000});
     for(int i=0;i<5;i++)
     {
-    if(chargeCycleCounts[i]<410)     //checking for low count
+      
+    if(counts[i]<410)     //checking for low count
     counts.lowCount++;               //incrementing the low count variable everytime by one if the value is less than 410
-    else if(chargeCycleCounts[i]>=410 && chargeCycleCounts[i]<910) //checking  for medium count 
+    else if(counts[i]>=410 && counts[i]<910) //checking  for medium count 
     counts.mediumCount++;            //incrementing the medium count variable everytime by one if the value is greater than 410 and less than 910
     else                              //checking for high count
     counts.highCount++;              // incrementing the high count variable
